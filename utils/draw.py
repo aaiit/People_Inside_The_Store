@@ -69,14 +69,12 @@ def draw_boxes(img, bbox, identities=None, offset=(0,0),P=None,Cx=None,R=None):
 
         # print(TOTAL,is_in)
         #  center_coordinates (m,n)
-        if abs(pow(Cx - center_coordinates[0],2)+pow(Cy - center_coordinates[1],2))<r*r and center_coordinates[0]<m and center_coordinates[0]>=0 and center_coordinates[1]<m and center_coordinates[1]>=0:
-            if id in Store:
+        if  center_coordinates[0]<m and center_coordinates[0]>0 and center_coordinates[1]<m and center_coordinates[1]>0: 
+            if (id in Store) and abs(pow(Cx - center_coordinates[0],2)+pow(Cy - center_coordinates[1],2))<r*r:
                 if is_in !=Store[id]:
-                    # print("######")
                     if is_in:TOTAL+=1
                     else:TOTAL-=1
-
-        Store[id] = is_in
+            Store[id] = is_in
 
         color = compute_color_for_labels(id)
         label = '{}{:d}'.format("", id)
