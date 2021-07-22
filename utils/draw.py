@@ -76,7 +76,7 @@ def draw_boxes(img, bbox, identities=None, offset=(0,0),P=None,Cx=None,R=None):
                     if is_in:TOTAL+=1
                     else:TOTAL-=1
 
-            Store[id] = is_in
+        Store[id] = is_in
 
         color = compute_color_for_labels(id)
         label = '{}{:d}'.format("", id)
