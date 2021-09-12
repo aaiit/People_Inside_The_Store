@@ -1,7 +1,7 @@
 # Deep Sort with PyTorch
 
 
-
+![](store.PNG)
 
 ## Introduction
 This is an implement of  tracking algorithm deep sort. Deep sort is basicly the same with sort but added a CNN model to extract features in image of human part bounded by a detector. 
