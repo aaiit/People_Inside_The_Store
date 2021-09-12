@@ -1,4 +1,4 @@
-# Deep Sort with PyTorch
+# Counting people inside a Store using Deep Sort with PyTorch and geometry conditions
 
 
 ![](screenshot.PNG)
